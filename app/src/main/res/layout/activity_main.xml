@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                        android:id="@+id/prevPage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/left_arrow"
+                        app:tint="@color/colorAccent"/>
+                <ImageView
+                        android:id="@+id/nextPage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/right_arrow"
+                        app:tint="@color/colorAccent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true">
+                <ImageView
+                        android:id="@+id/undo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/undo"
+                        app:tint="@color/colorAccent"/>
+                <ImageView
+                        android:id="@+id/redo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/redo"
+                        app:tint="@color/colorAccent"/>
+                <ImageView
+                        android:id="@+id/draw"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/pencil"
+                        app:tint="@color/colorAccent"/>
+                <ImageView
+                        android:id="@+id/highlight"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/highlighter"
+                        app:tint="@color/colorAccent"/>
+                <ImageView
+                        android:id="@+id/erase"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/eraser"
+                        app:tint="@color/colorAccent"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+            android:id="@+id/pdfLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar"
+    />
+
+    <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+        <TextView
+                android:id="@+id/pageNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+
+</RelativeLayout>
